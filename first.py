@@ -4,8 +4,7 @@ import pandas as pd
 import docx2txt
 import pdfplumber
 from summa import keywords
-from PIL import Image
-from fpdf import FPDF
+
 
 class doc_uploader:
 
@@ -102,8 +101,7 @@ class doc_uploader:
         self.doc_downloader(data)
 
 if __name__=="__main__":
-    img=Image.open('upload.png')
-    st.set_page_config(page_title="Doc Uploader",page_icon=img)
+    st.set_page_config(page_title="Doc Uploader")
     hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden; }
