@@ -1,4 +1,3 @@
-import base64
 import streamlit as st
 import pandas as pd
 import docx2txt
@@ -10,17 +9,17 @@ class doc_uploader:
 
     def __init__(self):
         st.title("Document Uploader")
-        st.markdown(""" <style>#MainMenu {visibility: hidden;}footer {visibility: hidden;}</style> """, unsafe_allow_html=True)
-        self.reduce_padding()
+        # st.markdown(""" <style>#MainMenu {visibility: hidden;}footer {visibility: hidden;}</style> """, unsafe_allow_html=True)
+    #     self.reduce_padding()
     
-    def reduce_padding(self):
-        padding = 0
-        st.markdown(f""" <style>.reportview-container .main .block-container{{
-                padding-top: {padding}rem;
-                padding-right: {padding}rem;
-                padding-left: {padding}rem;
-                padding-bottom: {padding}rem;
-            }} </style> """, unsafe_allow_html=True)
+    # def reduce_padding(self):
+    #     padding = 0
+    #     st.markdown(f""" <style>.reportview-container .main .block-container{{
+    #             padding-top: {padding}rem;
+    #             padding-right: {padding}rem;
+    #             padding-left: {padding}rem;
+    #             padding-bottom: {padding}rem;
+    #         }} </style> """, unsafe_allow_html=True)
 
     # @st.cache(suppress_st_warning=True)
     def uploader(self):
@@ -102,13 +101,13 @@ class doc_uploader:
 
 if __name__=="__main__":
     st.set_page_config(page_title="Doc Uploader")
-    hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden; }
-        footer {visibility: hidden;}
-        </style>
-        """
-    st.markdown(hide_menu_style, unsafe_allow_html=True)
+    # hide_menu_style = """
+    #     <style>
+    #     #MainMenu {visibility: hidden; }
+    #     footer {visibility: hidden;}
+    #     </style>
+    #     """
+    # st.markdown(hide_menu_style, unsafe_allow_html=True)
     x=doc_uploader()
     x.uploader()
     x.make_form()
